@@ -1,0 +1,10 @@
+/**
+ * @description       : This is a single trigger framework for contact
+ * @author            : Bharath Baddam
+ * @group             :
+ * @last modified on  : 01-20-2023
+ * @last modified by  : 
+ **/
+trigger ContactTrigger on Contact (after delete, after insert, after update, before delete, before insert, before update) {
+    TriggerFactory.createHandler( Contact.sObjectType );
+}
